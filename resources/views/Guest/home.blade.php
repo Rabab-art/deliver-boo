@@ -10,13 +10,22 @@
 {{-- Content section with all restaurant --}}
 @section('content')
 <div id="app">
-  <div class="jubotrone mb-4">
-    <img src="/images/Fast Delivery.jpg" alt="">
-    <span class=" justify-contente-center">
+  <div class="jubotrone mb-4" data-toggle="collapse">
+    <img src="/images/Fast Delivery.jpg" alt="" class="h-sm-30" >
+    <span class="navbar-toggler justify-contente-md-center" type="button" data-toggle="collapse" 
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation">
       Dove vuoi Quando vuoi
     </span>
 
   </div>
+
+
+
+ 
+
+
 
 
   <section class="container">
@@ -53,66 +62,50 @@
     </div> --}}
 
 
+    <div class="row">
+     
+        <div id="carouselExampleIndicators" class="carousel sz-slider" data-type="carousel" data-height="300px"
+          data-animation="dragX" data-width="100%" data-move="all">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" class="active"></li>
+            <li data-target="#carouselExampleIndicators"></li>
+            <li data-target="#carouselExampleIndicators"></li>
 
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
 
-    <div id="carouselExampleIndicators" class="carousel sz-slide" data-type="carousel" data-height="300px"
-      data-animation="dragX" data-width="100%">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" class="active"></li>
-        <li data-target="#carouselExampleIndicators"></li>
-        <li data-target="#carouselExampleIndicators"></li>
-        <li data-target="#carouselExampleIndicators"></li>
-        <li data-target="#carouselExampleIndicators"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
+              <img src="/images/logo.jpg" class=" h-100 w-auto mx-auto" alt="">
 
-          <img src="/images/logo.jpg" class="d-block h-100 w-auto mx-auto" alt="">
-      
+            </div>
+            <div class="carousel-item ">
+              <img src="/images/Fast Delivery.jpg" class=" h-100 w-auto mx-auto" alt="">
 
+            </div>
+            <div class="carousel-item ">
+              <img src="/images/Urban.jpg" class=" h-100 w-auto mx-auto" alt="">
+
+            </div>
+
+          </div>
+          <a class="carousel-control-prev carousel-control-btn" href="#carouselExampleIndicators" role="button">
+            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next carousel-control-btn" href="#carouselExampleIndicators" role="button">
+            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
 
-
-        <div class="carousel-item ">
-          <img src="/images/Fast Delivery.jpg" class="d-block h-100 w-auto mx-auto" alt="">
-
-        </div>
-
-        <div class="carousel-item ">
-          <img src="/images/Urban.jpg" class="d-block h-100 w-auto mx-auto" alt="">
-
-        </div>
-        <div class="carousel-item ">
-          <img src="/images/Fast Delivery.jpg" class="d-block h-100 w-auto mx-auto" alt="">
-
-        </div>
-        <div class="carousel-item ">
-          <img src="/images/Urban.jpg" class="d-block h-100 w-auto mx-auto" alt="">
-
-        </div>
-
-
-      </div>
-      <a class="carousel-control-prev carousel-control-btn" href="#carouselExampleIndicators" role="button"
-        >
-        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next carousel-control-btn" href="#carouselExampleIndicators" role="button"
-       >
-        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+     
     </div>
 
 
 
 
 
-
-
-
-    <div class="row rest-row">
+    <div class="row h-100">
       <div v-for="restaurant in restaurants" class="col-sm-4">
         <h1>@{{ restaurant . activity_name }}</h1>
         <div class="card" style="width: 18rem;">
