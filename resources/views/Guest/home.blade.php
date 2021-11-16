@@ -10,7 +10,7 @@
 {{-- Content section with all restaurant --}}
 @section('content')
 <div id="app">
- 
+
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -31,8 +31,7 @@
       </div>
     </div>
 
-
-    <section class="container h-100">
+    <section class="container">
       <nav class="navbar">
         <form class="form-inline mb-4">
           <input v-model='search_bar' @keyup.enter="getRestaurants()" class="form-control mr-sm-2" type="search"
@@ -40,15 +39,6 @@
           <button class="btn btn my-2  my-sm-0 search-buttom" type="submit">Search</button>
         </form>
       </nav>
-
-      <ul class="filters_menu">
-        <li class="active" data-filter="*">All</li>
-        <li data-filter=".burger">Burger</li>
-        <li data-filter=".pizza">Pizza</li>
-        <li data-filter=".pasta">Pasta</li>
-        <li data-filter=".fries">Fries</li>
-      </ul>
-
 
     <div class="row h-100">
       <div v-for="restaurant in restaurants" class="col-sm-4">
@@ -62,12 +52,29 @@
             <a :href="'/user/'+restaurant.id" class="btn btn-warning">Dettagli</a>
           </div>
         </div>
-
+    
       </div>
     </div>
+    </div>
+    </section>
+    @endsection
+
+
 </div>
-</section>
-@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {{-- Added the script section for the Vue logic --}}
 @section('script-end')
 <script>
