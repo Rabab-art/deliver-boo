@@ -35,7 +35,7 @@
 
 
                 <a class="navbar navbar-brand  " href="{{ url('/') }}">
-                    <img class="logo" src="/images/Urban.png" alt="">
+                    <img class="logo" src="" alt="">
                     <strong>DeliverBoo</strong>
                 </a>
 
